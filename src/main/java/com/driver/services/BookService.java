@@ -18,7 +18,7 @@ public class BookService {
     @Autowired
     AuthorRepository authorRepository;
 
-    public void createBook(Book book) {
+    public void createbook(Book book) {
         bookRepository2.save(book);
     }
 
