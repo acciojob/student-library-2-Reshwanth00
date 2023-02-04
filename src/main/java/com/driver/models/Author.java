@@ -25,6 +25,7 @@ public class Author {
 
     public Author() {
     }
+
     public Author(String name, String email, int age, String country) {
         this.name = name;
         this.email = email;
@@ -46,6 +47,14 @@ public class Author {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getAge() {
@@ -71,13 +80,4 @@ public class Author {
     public void setBooksWritten(List<Book> booksWritten) {
         this.booksWritten = booksWritten;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
-

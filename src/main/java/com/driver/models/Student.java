@@ -23,13 +23,14 @@ public class Student {
 
     public Student() {
     }
+
+
     public Student(String email, String name, int age, String country) {
         this.emailId = email;
         this.name = name;
         this.age = age;
         this.country = country;
     }
-
     // alter table student add foreign key constraint card references Card(id)
 
     @OneToOne
@@ -43,6 +44,8 @@ public class Student {
 
     @UpdateTimestamp
     private Date updatedOn;
+
+
     public int getId() {
         return id;
     }
@@ -106,7 +109,6 @@ public class Student {
     public void setUpdatedOn(Date updatedOn) {
         this.updatedOn = updatedOn;
     }
-
 
     @Override
     public String toString() {
