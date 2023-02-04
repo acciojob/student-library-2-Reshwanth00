@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthorController {
     @Autowired
     AuthorService authorService;
-    @PostMapping("/")
+    @PostMapping("/createAuthor")
     public ResponseEntity createAuthor(@RequestBody Author author){
         authorService.create(author);
-        return new ResponseEntity<>("the author is successfully added to the system", HttpStatus.CREATED);
+        return new ResponseEntity<>("Success", HttpStatus.CREATED);
     }
 }

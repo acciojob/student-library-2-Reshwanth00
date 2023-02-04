@@ -8,17 +8,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
+@RequestMapping("/book")
 public class BookController {
 
 
     @Autowired
     BookService bookService;
 
-    @PostMapping("/")
+    @PostMapping("/createBook")
     public ResponseEntity createBook(@RequestBody Book book) {
         bookService.createBook(book);
-        return new ResponseEntity<>("the book is added successfully", HttpStatus.CREATED);
+        return new ResponseEntity<>("Success", HttpStatus.CREATED);
     }
 
 
